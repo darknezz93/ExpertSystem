@@ -1,0 +1,48 @@
+<object-stream>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>init [0]</activationId>
+  <rule>init</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>init [0]</activationId>
+  <rule>init</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Ktory poziom [1]</activationId>
+  <rule>Ktory poziom</rule>
+  <declarations>x=com.sample.DroolsTest$Init@163ebb59(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>1</factId>
+  <objectToString>com.sample.DroolsTest$Init@163ebb59</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>init [0]</activationId>
+  <rule>init</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Ktory poziom [1]</activationId>
+  <rule>Ktory poziom</rule>
+  <declarations>x=com.sample.DroolsTest$Init@163ebb59(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>2</factId>
+  <objectToString>com.sample.DroolsTest$Ktory_poziom@63096dc3</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Ktory poziom [1]</activationId>
+  <rule>Ktory poziom</rule>
+  <declarations>x=com.sample.DroolsTest$Init@163ebb59(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+</object-stream>

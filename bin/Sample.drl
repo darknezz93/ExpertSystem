@@ -1,20 +1,829 @@
 package com.sample
- 
-import com.sample.DroolsTest.Message;
- 
-rule "Hello World"
-    when
-        m : Message( status == Message.HELLO, myMessage : message )
-    then
-        System.out.println( myMessage );
-        m.setMessage( "Goodbye cruel world" );
-        m.setStatus( Message.GOODBYE );
-        update( m );
+
+import com.sample.DroolsTest.Init; 
+import com.sample.DroolsTest.Jaki_budzet;
+import com.sample.DroolsTest.Czy_terenowy;
+import com.sample.DroolsTest.Czy_mercedes;
+import com.sample.DroolsTest.Samochod_rodzinny;
+import com.sample.DroolsTest.Pojemny_bagaznik;
+import com.sample.DroolsTest.Samochod_sportowy;
+import com.sample.DroolsTest.Samochod_miejski;
+import com.sample.DroolsTest.Samochod_cabrio;
+import com.sample.DroolsTest.Samochod_combi;
+import com.sample.DroolsTest.Samochod_coupe;
+import com.sample.DroolsTest.Limuzyna;
+import com.sample.DroolsTest.Van;
+import javax.swing.JOptionPane;
+
+rule "init"
+	when
+	then
+		insert(new Init());
 end
 
-rule "GoodBye"
-    when
-        Message( status == Message.GOODBYE, myMessage : message )
-    then
-        System.out.println( myMessage );
+
+rule "Jaki budzet"
+	when
+		x:Init()
+	then		
+		JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.budzet, "Pytanie", JOptionPane.YES_NO_OPTION, 
+			JOptionPane.QUESTION_MESSAGE, null, x.rodzaj_budzetu, x.rodzaj_budzetu[0]); 
+		insert(new Jaki_budzet(n+1));
+end
+
+rule "Czy terenowy"
+	when
+		x:Init()
+		exists(Jaki_budzet(w == 1 || w == 2 || w == 3));
+	then
+		JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.terenowy, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+		insert(new Czy_terenowy(n));
+end 
+
+
+rule "Czy mercedes"
+	when 
+		x:Init()
+		exists Czy_terenowy(w == 1);
+		exists Jaki_budzet(w == 1 || w == 2 || w == 3 )
+	then	
+		JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.mercedes, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+    	insert(new Czy_mercedes(n));
+end
+		
+rule "Samochod rodzinny"
+	when
+		x:Init() 
+		exists Czy_terenowy(w == 0);
+	then
+	 	JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.rodzinny, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+    	insert(new Samochod_rodzinny(n));
+end		
+
+rule "Pojemny bagaznik"
+	when 
+		x:Init()
+		exists Samochod_rodzinny(w == 1);
+	then
+    	JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.pojemny, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+	 	insert(new Pojemny_bagaznik(n));
+end
+
+rule "Samochod sportowy"
+	when 
+		x:Init()
+		exists Samochod_rodzinny(w == 0);
+	then
+   		JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.sportowy, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+   		insert(new Samochod_sportowy(n));
+end
+	
+rule "Samochod miejski"
+	when 
+		x:Init()
+		exists Samochod_sportowy(w == 0);
+	then
+	 	JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.miejski, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+    	insert(new Samochod_miejski(n));
+end		
+
+rule "Samochod cabrio"
+	when 
+		x:Init()
+		exists Samochod_sportowy(w == 1);
+	then
+	 	JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.cabrio, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+    	insert(new Samochod_cabrio(n));
+end		
+
+rule "Samochod combi"
+	when 
+		x:Init()
+		exists Samochod_miejski(w == 0);
+	then
+   		JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.combi, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+		insert(new Samochod_combi(n));
+end	
+
+rule "Samochod coupe"
+	when 
+		x:Init()
+		exists Samochod_combi(w == 0);
+	then
+	 	JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.coupe, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+   		insert(new Samochod_coupe(n));
+end		
+
+rule "Limuzyna"
+	when 
+		x:Init()
+		exists Samochod_coupe(w == 0);
+	then	
+		JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.limuzyna, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+		insert(new Limuzyna(n));
+end		
+
+rule "Van"
+	when 
+		x:Init()
+		exists Limuzyna(w == 0);
+	then	
+		JOptionPane frame = new JOptionPane();
+		int n = JOptionPane.showOptionDialog(frame, x.van, "Pytanie", JOptionPane.YES_NO_OPTION,
+	   		 JOptionPane.QUESTION_MESSAGE, null, x.tab, x.tab[0]); 
+		insert(new Van(n));
+end		
+	
+		
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+				
+rule "Brak propozycji"
+ 	when
+ 		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==1);
+ 		exists Czy_mercedes(w==1);
+ 	then
+ 		System.out.println("Brak propozycji w wybranym budzecie");
+ 		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Brak propozycji w wybranym budzecie");
+end
+
+rule "Mercedes GLK Off-roader"
+	when
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==1);
+ 		exists Czy_mercedes(w==1);
+ 	then
+ 		System.out.println("Mercedes GLK Off-roader");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Mercedes GLK Off-roader");
+end	
+
+rule "Mercedes G65 AMG"
+	when
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==1);
+ 		exists Czy_mercedes(w==1);
+ 	then
+ 		System.out.println("Mercedes G65 AMG");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Mercedes G65 AMG");
+end
+
+rule "Kabutops"
+	when
+		exists Ktory_poziom(w==2);
+ 		exists Mozna_zlapac(w==0);
+ 		exists Potrafi_spiewac(w==0);
+ 	then
+ 		System.out.println("Kabutops");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Kabutops");
+end
+
+rule "Dragonite"
+	when
+		exists Ktory_poziom(w==3);
+ 		exists Mozna_zlapac(w==0);
+ 	then
+ 		System.out.println("Dragonite");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Dragonite");
+end	
+
+rule "Paras"
+	when
+		exists Ktory_poziom(w==1);
+ 		exists Mozna_zlapac(w==1);
+ 		exists Gdzie_wystepujesz(w==2);
+ 	then
+ 		System.out.println("Paras");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Paras");
+end
+
+rule "Parasect"
+	when
+		exists Ktory_poziom(w==2);
+ 		exists Mozna_zlapac(w==1);
+ 		exists Gdzie_wystepujesz(w==2);
+ 	then
+ 		System.out.println("Parasect");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Parasect");
+end
+
+rule "Parasnact"
+	when
+		exists Ktory_poziom(w==3);
+ 		exists Mozna_zlapac(w==1);
+ 		exists Gdzie_wystepujesz(w==2);
+ 	then
+ 		System.out.println("Parasnact");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Parasnact");
+end
+
+rule "Porygon"
+	when
+		exists Ktory_poziom(w==1);
+ 		exists Mozna_zlapac(w==1);
+ 		exists Gdzie_wystepujesz(w==3);
+ 	then
+ 		System.out.println("Porygon");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Porygon");
+end
+
+rule "Zumbat"
+	when
+		exists Ktory_poziom(w==2);
+ 		exists Mozna_zlapac(w==1);
+ 		exists Gdzie_wystepujesz(w==3);
+ 	then
+ 		System.out.println("Zumbat");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Zumbat");
+end
+
+rule "Golbat"
+	when
+		exists Ktory_poziom(w==3);
+ 		exists Mozna_zlapac(w==1);
+ 		exists Gdzie_wystepujesz(w==3);
+ 	then
+ 		System.out.println("Golbat");
+ 		JOptionPane frame = new JOptionPane();
+ 		JOptionPane.showMessageDialog(frame, "Golbat");
+end
+
+rule "Horsea"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==4);
+		exists Lubi_slodka(w==1);
+		exists Lubi_slona(w==1);
+	then 
+		System.out.println("Horsea");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Horsea");
+end
+
+rule "Seadra"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==4);
+		exists Lubi_slodka(w==1);
+		exists Lubi_slona(w==1);
+	then 
+		System.out.println("Seadra");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Seadra");
+end
+
+rule "Fisheon"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==4);
+		exists Lubi_slodka(w==1);
+		exists Lubi_slona(w==1);
+	then 
+		System.out.println("Fisheon");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Fisheon");
+end
+
+rule "Poliwag"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==4);
+		exists Lubi_slodka(w==1);
+		exists Lubi_slona(w==0);
+	then 
+		System.out.println("Poliwag");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Poliwag");
+end
+
+rule "Poliwhirl"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==4);
+		exists Lubi_slodka(w==1);
+		exists Lubi_slona(w==0);
+	then 
+		System.out.println("Poliwhirl");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Poliwhirl");
+end
+
+rule "Poliwrath"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==4);
+		exists Lubi_slodka(w==1);
+		exists Lubi_slona(w==0);
+	then 
+		System.out.println("Poliwrath");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Poliwrath");
+end
+
+rule "Magikarp"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==4);
+		exists Lubi_slodka(w==0);
+		//lubi tylko s³on¹
+	then 
+		System.out.println("Magikarp");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Magikarp");
+end
+
+rule "Gyarados"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==4);
+		exists Lubi_slodka(w==0);
+		//lubi tylko s³on¹
+	then 
+		System.out.println("Gyarados");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Gyarados");
+end
+
+rule "Lapras"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==4);
+		exists Lubi_slodka(w==0);
+		//lubi tylko s³on¹
+	then 
+		System.out.println("Lapras");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Lapras");
+end
+
+rule "Caterpee"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==1);
+		exists Ma_skrzydla(w==1);
+		exists Jest_owadem(w==1);
+	then 
+		System.out.println("Caterpee");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Caterpee");
+end
+
+rule "Metapod"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==1);
+		exists Ma_skrzydla(w==1);
+		exists Jest_owadem(w==1);
+	then 
+		System.out.println("Metapod");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Metapod");
+end
+
+rule "Butterfree"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==1);
+		exists Ma_skrzydla(w==1);
+		exists Jest_owadem(w==1);
+	then 
+		System.out.println("Butterfree");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Butterfree");
+end
+
+rule "Dratini"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==1);
+		exists Ma_skrzydla(w==1);
+		exists Jest_owadem(w==0);
+	then 
+		System.out.println("Dratini");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Dratini");
+end
+
+
+rule "Venomoth"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==1);
+		exists Ma_skrzydla(w==1);
+		exists Jest_owadem(w==0);
+	then 
+		System.out.println("Venomoth");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Venomoth");
+end
+
+rule "Aerodactyl"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==1);
+		exists Ma_skrzydla(w==1);
+		exists Jest_owadem(w==0);
+	then 
+		System.out.println("Aerodactyl");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Aerodactyl");
+end
+
+rule "Magnemite"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==1);
+		exists Ma_skrzydla(w==0);
+	then 
+		System.out.println("Magnemite");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Magnemite");
+end
+
+rule "Magneton"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==1);
+		exists Ma_skrzydla(w==0);
+	then 
+		System.out.println("Magneton");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Magneton");
+end
+
+rule "Maodude"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==1);
+		exists Ma_skrzydla(w==0);
+	then 
+		System.out.println("Maodude");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Maodude");
+end
+
+rule "Charmander"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==1);
+	then 
+		System.out.println("Charmander");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Charmander");
+end
+
+rule "Charmeleon"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==1);
+	then 
+		System.out.println("Charmeleon");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Charmeleon");
+end
+
+rule "Charizard"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==1);
+	then 
+		System.out.println("Charizard");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Charizard");
+end
+
+rule "Squirtle"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==0);
+	then 
+		System.out.println("Squirtle");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Squirtle");
+end
+
+rule "Wartortle"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==0);
+	then 
+		System.out.println("Wartortle");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Wartortle");
+end
+
+rule "Blastoise"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==0);
+	then 
+		System.out.println("Blastoise");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Blastoise");
+end
+
+rule "Bellsprout"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==1);
+	then 
+		System.out.println("Bellsprout");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Bellsprout");
+end
+
+rule "Weepinbell"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==1);
+	then 
+		System.out.println("Weepinbell");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Weepinbell");
+end
+
+rule "Victreebel"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==1);
+	then 
+		System.out.println("Victreebel");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Victreebel");
+end
+
+rule "Nidoran"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==0);
+		exists Przewodzisz_prad(w==0);
+	then 
+		System.out.println("Nidoran");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Nidoran");
+end
+
+rule "Nidorino"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==0);
+		exists Przewodzisz_prad(w==0);
+	then 
+		System.out.println("Nidorino");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Nidorino");
+end
+
+rule "Nidoking"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==0);
+		exists Przewodzisz_prad(w==0);
+	then 
+		System.out.println("Nidoking");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Nidoking");
+end
+
+rule "Pikachu"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==0);
+		exists Przewodzisz_prad(w==1);
+		exists Jestes_z_metalu(w==0);
+	then 
+		System.out.println("Pikachu");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Pikachu");
+end
+
+rule "Reichu"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==0);
+		exists Przewodzisz_prad(w==1);
+		exists Jestes_z_metalu(w==0);
+	then 
+		System.out.println("Reichu");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Reichu");
+end
+
+rule "Teichu"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==0);
+		exists Przewodzisz_prad(w==1);
+		exists Jestes_z_metalu(w==0);
+	then 
+		System.out.println("Teichu");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Teichu");
+end
+
+rule "Voltorb"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==0);
+		exists Przewodzisz_prad(w==1);
+		exists Jestes_z_metalu(w==1);
+	then 
+		System.out.println("Voltorb");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Voltorb");
+end
+
+rule "Electrode"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==0);
+		exists Przewodzisz_prad(w==1);
+		exists Jestes_z_metalu(w==1);
+	then 
+		System.out.println("Electrode");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Electrode");
+end
+
+rule "Nanotrude"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==1);
+		exists Unosi_w_powietrzu(w==0);
+		exists Jaki_kolor(w==1);
+		exists Ziejesz_ogniem(w==0);
+		exists Jestes_roslina(w==0);
+		exists Przewodzisz_prad(w==1);
+		exists Jestes_z_metalu(w==1);
+	then 
+		System.out.println("Nanotrude");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Nanotrude");
+end
+
+rule "Gastly"
+	when
+		exists Ktory_poziom(w==1);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==5);
+	then 
+		System.out.println("Gastly");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Gastly");
+end
+
+rule "Haunter"
+	when
+		exists Ktory_poziom(w==2);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==5);
+	then 
+		System.out.println("Haunter");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Haunter");
+end
+
+rule "Gengar"
+	when
+		exists Ktory_poziom(w==3);
+		exists Mozna_zlapac(w==1);
+		exists Gdzie_wystepujesz(w==5);
+	then 
+		System.out.println("Gengar");
+		JOptionPane frame = new JOptionPane();
+		JOptionPane.showMessageDialog(frame, "Gengar");
 end

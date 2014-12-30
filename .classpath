@@ -4,5 +4,7 @@
 	<classpathentry kind="src" path="src/main/rules"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="DROOLS/Drools"/>
+	<classpathentry kind="lib" path="C:/Users/Adam/Desktop/eclipse_drools/plugins/org.eclipse.jdt_3.9.1.v20140221-1700.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Adam/Desktop/eclipse_drools/plugins/org.eclipse.jdt.core_3.9.2.v20140114-1555.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

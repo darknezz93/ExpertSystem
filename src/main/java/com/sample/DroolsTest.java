@@ -17,17 +17,14 @@ import org.drools.runtime.StatefulKnowledgeSession;
  */
 public class DroolsTest {
 
-    public static final void main(String[] args) {
+
+    DroolsTest() {
         try {
             // load up the knowledge base
             KnowledgeBase kbase = readKnowledgeBase();
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
             // go !
-            Message message = new Message();
-            message.setMessage("Hello World");
-            message.setStatus(Message.HELLO);
-            ksession.insert(message);
             ksession.fireAllRules();
             logger.close();
         } catch (Throwable t) {
@@ -49,32 +46,180 @@ public class DroolsTest {
         kbase.addKnowledgePackages(kbuilder.getKnowledgePackages());
         return kbase;
     }
-
-    public static class Message {
-
-        public static final int HELLO = 0;
-        public static final int GOODBYE = 1;
-
-        private String message;
-
-        private int status;
-
-        public String getMessage() {
-            return this.message;
-        }
-
-        public void setMessage(String message) {
-            this.message = message;
-        }
-
-        public int getStatus() {
-            return this.status;
-        }
-
-        public void setStatus(int status) {
-            this.status = status;
-        }
-
+    public static class Init {
+    	public String tab[] = {"Nie", "Tak"};
+    	public String rodzaj_budzetu[] = {" <80tys. z³", "80tys. z³<200tys. z³", ">200tys. z³"};
+    	
+    	public String budzet = "Jaki jest Twój bud¿et?";
+    	public String terenowy = "Czy potrzebujesz samochodu terenowego?";
+    	public String mercedes = "Czy lubisz markê Mercedes?";
+    	public String rodzinny = "Czy szukasz samochodu rodzinnego?";
+    	public String pojemny = "Potrzebujesz równie¿ pojemnego baga¿nika?";
+    	public String sportowy = "Czy szukasz samochodu sportowego?";
+    	public String cabrio = "Czy ma to byæ samochód typu cabrio?";
+    	public String miejski = "Czy szukasz samochodu miejskiego?";
+    	public String combi = "Interesuje Ciê samochód typu Combi?";
+    	public String coupe = "Czy ma to byæ samochód 3-drzwiowy?";
+    	public String limuzyna = "Czy ma to byæ limuzyna?";
+    	public String van = "Czy samochód ma s³u¿yæ do przewozenia wiêkszej iloœci osób (powy¿ej 5)?";
+    	
+    	public Init(){}
     }
+    
+    public static class Jaki_budzet {
+    	public int w;
+    	
+    	public Jaki_budzet(int wartosc) {
+    		w = wartosc;
+    	}
 
+    }    
+    
+    public static class Czy_terenowy{
+    	public int w;
+    	
+    	public Czy_terenowy(int wartosc) {
+    		/*
+    		String opis = "Czy mo¿na z³apaæ Twojego Pokemona?";
+    		String odp1 = "Tak";
+    		String odp2 = "Nie";
+    		*/
+    		w = wartosc;
+    	}
+    }
+    
+    public static class Czy_mercedes {
+    	public int w;
+    	
+    	public Czy_mercedes(int wartosc) {
+    		/*
+    		String opis = "Czy Twój Pokemon potrafi spiewaæ?";
+    		String odp1 = "Tak";
+    		String odp2 = "Nie";
+    		*/
+    		w = wartosc;
+    	}
+    }
+    
+    public static class Samochod_rodzinny {
+    	public int w;
+    	
+    	public Samochod_rodzinny(int wartosc) {
+    		/*
+    		String opis = "Czy Twój Pokemon potrafi unosiæ siê w powietrzu?";
+    		String odp1 = "Tak";
+    		String odp2 = "Nie";
+    		*/
+    		w = wartosc;
+    	}
+    }
+    
+    public static class Pojemny_bagaznik {
+    	public int w;
+    	
+    	public Pojemny_bagaznik(int wartosc) {
+
+    		/*
+    		String opis = "Czy Twój Pokemon ma skrzyd³a?";
+    		String odp1 = "Tak";
+    		String odp2 = "Nie";
+    		*/
+    		w = wartosc;
+    	}
+    }
+    
+    public static class Samochod_sportowy {
+    	public int w;
+    	
+    	public Samochod_sportowy(int wartosc) {
+    		/*
+    		String opis = "Czy Twój Pokemon jest owadem?";
+    		String odp1 = "Tak";
+    		String odp2 = "Nie";
+    		*/
+    		w = wartosc;
+    	}
+    }
+    
+    public static class Samochod_miejski {
+    	public int w;
+    	
+    	public Samochod_miejski(int wartosc) {
+    		/*
+    		String opis = "Gdzie Twój Pokemon wystêpuje?";
+    		String odp1 = "£¹ki";
+    		String odp2 = "Lasy";
+    		String odp3 = "Ruiny miasta";
+    		String odp4 = "Woda";
+    		*/
+    		w = wartosc;
+    	}
+    }
+    
+    public static class Samochod_cabrio {
+    	public int w;
+    	
+    	public Samochod_cabrio(int wartosc) {
+    		/*
+    		String opis = "Czy Twój Pokemon lubi s³on¹ wodê?";
+    		String odp1 = "Tak";
+    		String odp2 = "Nie";
+    		*/
+    		w = wartosc;
+    	}
+    }
+    
+    public static class Samochod_combi {
+    	public int w;
+    	
+    	public Samochod_combi(int wartosc) {
+    		/*
+    		String opis = "Czy Twój Pokemon lubi s³odk¹ wodê?";
+    		String odp1 = "Tak";
+    		String odp2 = "Nie";
+    		*/
+    		w = wartosc;
+    	}
+    }
+    
+    public static class Samochod_coupe {
+    	public int w;
+    	
+    	public Samochod_coupe(int wartosc) {
+    		/*
+    		String opis = "Jakiego koloru jest Twój Pokemon?";
+    		String odp1 = "Ciep³y";
+    		String odp2 = "Zimny";
+    		*/
+    		w = wartosc;
+    	}
+    }
+    
+    public static class Limuzyna {
+    	public int w;
+    	
+    	public Limuzyna(int wartosc) {
+    		/*
+    		String opis = "Czy Twój Pokemon zieje ogniem?";
+    		String odp1 = "Tak";
+    		String odp2 = "Nie";
+    		*/
+    		w = wartosc;
+    	} 
+    }
+    
+    public static class Van {
+    	public int w;
+    	
+    	public Van(int wartosc) {
+    		/*
+    		String opis = "Czy Twój Pokemon jest roœlin¹?";
+    		String odp1 = "Tak";
+    		String odp2 = "Nie";
+    		 */
+    		w = wartosc;
+    	} 
+    }
+    
+    
 }
