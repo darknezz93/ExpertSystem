@@ -13,14 +13,14 @@
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>Ktory poziom [1]</activationId>
-  <rule>Ktory poziom</rule>
-  <declarations>x=com.sample.DroolsTest$Init@163ebb59(1)</declarations>
+  <activationId>Jaki budzet [1]</activationId>
+  <rule>Jaki budzet</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>com.sample.DroolsTest$Init@163ebb59</objectToString>
+  <objectToString>com.sample.DroolsTest$Init@750c19c9</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -30,19 +30,198 @@
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Ktory poziom [1]</activationId>
-  <rule>Ktory poziom</rule>
-  <declarations>x=com.sample.DroolsTest$Init@163ebb59(1)</declarations>
+  <activationId>Jaki budzet [1]</activationId>
+  <rule>Jaki budzet</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Czy terenowy [1]</activationId>
+  <rule>Czy terenowy</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>2</factId>
-  <objectToString>com.sample.DroolsTest$Ktory_poziom@63096dc3</objectToString>
+  <objectToString>com.sample.DroolsTest$Jaki_budzet@1a141672</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>Ktory poziom [1]</activationId>
-  <rule>Ktory poziom</rule>
-  <declarations>x=com.sample.DroolsTest$Init@163ebb59(1)</declarations>
+  <activationId>Jaki budzet [1]</activationId>
+  <rule>Jaki budzet</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Czy terenowy [1]</activationId>
+  <rule>Czy terenowy</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Samochod rodzinny [1]</activationId>
+  <rule>Samochod rodzinny</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>3</factId>
+  <objectToString>com.sample.DroolsTest$Czy_terenowy@67ab4947</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Czy terenowy [1]</activationId>
+  <rule>Czy terenowy</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Samochod rodzinny [1]</activationId>
+  <rule>Samochod rodzinny</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Samochod sportowy [1]</activationId>
+  <rule>Samochod sportowy</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>4</factId>
+  <objectToString>com.sample.DroolsTest$Samochod_rodzinny@635dbb3e</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Samochod rodzinny [1]</activationId>
+  <rule>Samochod rodzinny</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Samochod sportowy [1]</activationId>
+  <rule>Samochod sportowy</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Samochod miejski [1]</activationId>
+  <rule>Samochod miejski</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>5</factId>
+  <objectToString>com.sample.DroolsTest$Samochod_sportowy@3b010a3b</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Samochod sportowy [1]</activationId>
+  <rule>Samochod sportowy</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Samochod miejski [1]</activationId>
+  <rule>Samochod miejski</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Samochod combi [1]</activationId>
+  <rule>Samochod combi</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>6</factId>
+  <objectToString>com.sample.DroolsTest$Samochod_miejski@285f8c31</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Samochod miejski [1]</activationId>
+  <rule>Samochod miejski</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Samochod combi [1]</activationId>
+  <rule>Samochod combi</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Samochod coupe [1]</activationId>
+  <rule>Samochod coupe</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>7</factId>
+  <objectToString>com.sample.DroolsTest$Samochod_combi@b64c9d9</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Samochod combi [1]</activationId>
+  <rule>Samochod combi</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Samochod coupe [1]</activationId>
+  <rule>Samochod coupe</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Limuzyna [1]</activationId>
+  <rule>Limuzyna</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>8</factId>
+  <objectToString>com.sample.DroolsTest$Samochod_coupe@79acdb96</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Samochod coupe [1]</activationId>
+  <rule>Samochod coupe</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Limuzyna [1]</activationId>
+  <rule>Limuzyna</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Audi A8 [0]</activationId>
+  <rule>Audi A8</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>9</factId>
+  <objectToString>com.sample.DroolsTest$Limuzyna@6d84f7a0</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Limuzyna [1]</activationId>
+  <rule>Limuzyna</rule>
+  <declarations>x=com.sample.DroolsTest$Init@750c19c9(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Audi A8 [0]</activationId>
+  <rule>Audi A8</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Audi A8 [0]</activationId>
+  <rule>Audi A8</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>

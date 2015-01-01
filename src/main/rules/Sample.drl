@@ -177,7 +177,7 @@ rule "Mercedes GLK Off-roader"
  	then
  		System.out.println("Mercedes GLK Off-roader");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Mercedes GLK Off-roader");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Mercedes GLK Off-roader");
 end	
 
 rule "Mercedes G65 AMG"
@@ -188,642 +188,466 @@ rule "Mercedes G65 AMG"
  	then
  		System.out.println("Mercedes G65 AMG");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Mercedes G65 AMG");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Mercedes G65 AMG");
 end
 
-rule "Kabutops"
+rule "Skoda Yeti"
 	when
-		exists Ktory_poziom(w==2);
- 		exists Mozna_zlapac(w==0);
- 		exists Potrafi_spiewac(w==0);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Czy_mercedes(w==0);
  	then
- 		System.out.println("Kabutops");
+ 		System.out.println("Skoda Yeti");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Kabutops");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Skoda Yeti");
 end
 
-rule "Dragonite"
+rule "Volkswagen Touareg"
 	when
-		exists Ktory_poziom(w==3);
- 		exists Mozna_zlapac(w==0);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Czy_mercedes(w==0);
  	then
- 		System.out.println("Dragonite");
+ 		System.out.println("Volkswagen Touareg");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Dragonite");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Volskwagen Touareg");
 end	
 
-rule "Paras"
+rule "BMW X6"
 	when
-		exists Ktory_poziom(w==1);
- 		exists Mozna_zlapac(w==1);
- 		exists Gdzie_wystepujesz(w==2);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Czy_mercedes(w==0);
  	then
- 		System.out.println("Paras");
+ 		System.out.println("BMW X6");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Paras");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie BMW X6");
 end
 
-rule "Parasect"
+rule "Pegueot 5008"
 	when
-		exists Ktory_poziom(w==2);
- 		exists Mozna_zlapac(w==1);
- 		exists Gdzie_wystepujesz(w==2);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==1);
+ 		exists Pojemny_bagaznik(w==1);
  	then
- 		System.out.println("Parasect");
+ 		System.out.println("Pegueot 5008");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Parasect");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Pegueot 5008");
 end
 
-rule "Parasnact"
+rule "Volvo V70"
 	when
-		exists Ktory_poziom(w==3);
- 		exists Mozna_zlapac(w==1);
- 		exists Gdzie_wystepujesz(w==2);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==1);
+ 		exists Pojemny_bagaznik(w==1);
  	then
- 		System.out.println("Parasnact");
+ 		System.out.println("Volvo V70");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Parasnact");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Volvo V70");
 end
 
-rule "Porygon"
+rule "Mercedes M"
 	when
-		exists Ktory_poziom(w==1);
- 		exists Mozna_zlapac(w==1);
- 		exists Gdzie_wystepujesz(w==3);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==1);
+ 		exists Pojemny_bagaznik(w==1);
  	then
- 		System.out.println("Porygon");
+ 		System.out.println("Mercedes M");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Porygon");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Mercedes M");
 end
 
-rule "Zumbat"
+rule "Renault Kangoo"
 	when
-		exists Ktory_poziom(w==2);
- 		exists Mozna_zlapac(w==1);
- 		exists Gdzie_wystepujesz(w==3);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==1);
+ 		exists Pojemny_bagaznik(w==0);
  	then
- 		System.out.println("Zumbat");
+ 		System.out.println("Renault Kangoo");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Zumbat");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Renault Kangoo");
 end
 
-rule "Golbat"
+rule "Volkswagen Sharan"
 	when
-		exists Ktory_poziom(w==3);
- 		exists Mozna_zlapac(w==1);
- 		exists Gdzie_wystepujesz(w==3);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==1);
+ 		exists Pojemny_bagaznik(w==0);
  	then
- 		System.out.println("Golbat");
+ 		System.out.println("Volskwagen Sharan");
  		JOptionPane frame = new JOptionPane();
- 		JOptionPane.showMessageDialog(frame, "Golbat");
+ 		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Volkswagen Sharan");
 end
 
-rule "Horsea"
+rule "Volvo S80"
 	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==4);
-		exists Lubi_slodka(w==1);
-		exists Lubi_slona(w==1);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==1);
+ 		exists Pojemny_bagaznik(w==0);
 	then 
-		System.out.println("Horsea");
+		System.out.println("Volvo S80");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Horsea");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Volvo S80");
 end
 
-rule "Seadra"
+rule "Renault Megane R.S 265"
 	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==4);
-		exists Lubi_slodka(w==1);
-		exists Lubi_slona(w==1);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==1);
+ 		exists Samochod_cabrio(w==0);
 	then 
-		System.out.println("Seadra");
+		System.out.println("Renault Megane R.S 265");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Seadra");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Renault Megane R.S 265");
 end
 
-rule "Fisheon"
+rule "Audi TT"
 	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==4);
-		exists Lubi_slodka(w==1);
-		exists Lubi_slona(w==1);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==1);
+ 		exists Samochod_cabrio(w==0);
 	then 
-		System.out.println("Fisheon");
+		System.out.println("Audi TT");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Fisheon");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Audi TT");
 end
 
-rule "Poliwag"
+rule "Lamborghini Aventador"
 	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==4);
-		exists Lubi_slodka(w==1);
-		exists Lubi_slona(w==0);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==1);
+ 		exists Samochod_cabrio(w==0);
 	then 
-		System.out.println("Poliwag");
+		System.out.println("Lamborghini Aventador");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Poliwag");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Lamborghini Aventador");
 end
 
-rule "Poliwhirl"
+rule "Volkswagen Golf Cabriolet"
 	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==4);
-		exists Lubi_slodka(w==1);
-		exists Lubi_slona(w==0);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==1);
+ 		exists Samochod_cabrio(w==1);
 	then 
-		System.out.println("Poliwhirl");
+		System.out.println("Volkswagen Golf Cabriolet");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Poliwhirl");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Volkswagen Golf Cabriolet");
 end
 
-rule "Poliwrath"
+rule "BMW serii 2 Cabrio"
 	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==4);
-		exists Lubi_slodka(w==1);
-		exists Lubi_slona(w==0);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==1);
+ 		exists Samochod_cabrio(w==1);
 	then 
-		System.out.println("Poliwrath");
+		System.out.println("BMW serii 2 Cabrio");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Poliwrath");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie BMW serii 2 Cabrio");
 end
 
-rule "Magikarp"
+rule "Ferrari Italia Cabrio"
 	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==4);
-		exists Lubi_slodka(w==0);
-		//lubi tylko s³on¹
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==1);
+ 		exists Samochod_cabrio(w==1);
 	then 
-		System.out.println("Magikarp");
+		System.out.println("Ferrari Italia Cabrio");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Magikarp");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Ferrari Italia Cabrio");
 end
 
-rule "Gyarados"
+rule "Skoda Citigo"
 	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==4);
-		exists Lubi_slodka(w==0);
-		//lubi tylko s³on¹
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==1);
 	then 
-		System.out.println("Gyarados");
+		System.out.println("Skoda Citigo");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Gyarados");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Skoda Citigo");
 end
 
-rule "Lapras"
+rule "Smart"
 	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==4);
-		exists Lubi_slodka(w==0);
-		//lubi tylko s³on¹
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==1);
 	then 
-		System.out.println("Lapras");
+		System.out.println("Smart");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Lapras");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Smart");
 end
 
-rule "Caterpee"
+rule "Mini John Cooper"
 	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==1);
-		exists Ma_skrzydla(w==1);
-		exists Jest_owadem(w==1);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==1);
 	then 
-		System.out.println("Caterpee");
+		System.out.println("Mini John Cooper");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Caterpee");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Mini John Cooper");
 end
 
-rule "Metapod"
+rule "Skoda Octavia Combi"
 	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==1);
-		exists Ma_skrzydla(w==1);
-		exists Jest_owadem(w==1);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==1)
 	then 
-		System.out.println("Metapod");
+		System.out.println("Skoda Octavia Combi");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Metapod");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Skoda Octavia Combi");
 end
 
-rule "Butterfree"
+rule "Audi A6 Combi"
 	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==1);
-		exists Ma_skrzydla(w==1);
-		exists Jest_owadem(w==1);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==1)
 	then 
-		System.out.println("Butterfree");
+		System.out.println("Audi A6 Combi");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Butterfree");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Audi A6 Combi");
 end
 
-rule "Dratini"
+rule "Mercedes E Combi"
 	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==1);
-		exists Ma_skrzydla(w==1);
-		exists Jest_owadem(w==0);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==1)
 	then 
-		System.out.println("Dratini");
+		System.out.println("Mercedes E Combi");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Dratini");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Mercedes E Combi");
 end
 
 
-rule "Venomoth"
+rule "Toyota Auris Coupe"
 	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==1);
-		exists Ma_skrzydla(w==1);
-		exists Jest_owadem(w==0);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==1);
 	then 
-		System.out.println("Venomoth");
+		System.out.println("Toyota Auris Coupe");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Venomoth");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Toyota Auris Coupe");
 end
 
-rule "Aerodactyl"
+rule "Volkswagen Sirocco"
 	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==1);
-		exists Ma_skrzydla(w==1);
-		exists Jest_owadem(w==0);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==1);
 	then 
-		System.out.println("Aerodactyl");
+		System.out.println("Volkswagen Sirocco");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Aerodactyl");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Volkswagen Sirocco");
 end
 
-rule "Magnemite"
+rule "BMW serii 6 coupe"
 	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==1);
-		exists Ma_skrzydla(w==0);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==1);
 	then 
-		System.out.println("Magnemite");
+		System.out.println("BMW serii 6 coupe");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Magnemite");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie BMW serii 6 coupe");
 end
 
-rule "Magneton"
+rule "Skoda Octavia"
 	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==1);
-		exists Ma_skrzydla(w==0);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==0);
+ 		exists Limuzyna(w==1);
 	then 
-		System.out.println("Magneton");
+		System.out.println("Skoda Octavia");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Magneton");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Skoda Octavia");
 end
 
-rule "Maodude"
+rule "Mercedes klasa C"
 	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==1);
-		exists Ma_skrzydla(w==0);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==0);
+ 		exists Limuzyna(w==1);
 	then 
-		System.out.println("Maodude");
+		System.out.println("Mercedes klasa C");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Maodude");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Mercedes klasa C");
 end
 
-rule "Charmander"
+rule "Audi A8"
 	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==1);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==0);
+ 		exists Limuzyna(w==1);
 	then 
-		System.out.println("Charmander");
+		System.out.println("Audi A8");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Charmander");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Audi A8");
 end
 
-rule "Charmeleon"
+rule "Renault Trafic"
 	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==1);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==0);
+ 		exists Limuzyna(w==0);
+ 		exists Van(w==1);
 	then 
-		System.out.println("Charmeleon");
+		System.out.println("Renault Trafic");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Charmeleon");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Renault Trafic");
 end
 
-rule "Charizard"
+rule "Volkswagen Transporter"
 	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==1);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==0);
+ 		exists Limuzyna(w==0);
+ 		exists Van(w==1);
 	then 
-		System.out.println("Charizard");
+		System.out.println("Volkswagen Transporter");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Charizard");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Volkswagen Transporter");
 end
 
-rule "Squirtle"
+rule "Mercedes klasa V"
 	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==0);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==0);
+ 		exists Limuzyna(w==0);
+ 		exists Van(w==1);
 	then 
-		System.out.println("Squirtle");
+		System.out.println("Mercedes klasa V");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Squirtle");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Mercedes klasa V");
 end
 
-rule "Wartortle"
+rule "Pegout 301 Sedan"
 	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==0);
+		exists Jaki_budzet(w==1);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==0);
+ 		exists Limuzyna(w==0);
+ 		exists Van(w==0);
 	then 
-		System.out.println("Wartortle");
+		System.out.println("Pegout 301 Sedan");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Wartortle");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Pegout 301 Sedan");
 end
 
-rule "Blastoise"
+rule "Honda Accord"
 	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==0);
+		exists Jaki_budzet(w==2);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==0);
+ 		exists Limuzyna(w==0);
+ 		exists Van(w==0);
 	then 
-		System.out.println("Blastoise");
+		System.out.println("Honda Accord");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Blastoise");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Honda Accord");
 end
 
-rule "Bellsprout"
+rule "Audi A7"
 	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==1);
+		exists Jaki_budzet(w==3);
+ 		exists Czy_terenowy(w==0);
+ 		exists Samochod_rodzinny(w==0);
+ 		exists Samochod_sportowy(w==0);
+ 		exists Samochod_miejski(w==0);
+ 		exists Samochod_combi(w==0);
+ 		exists Samochod_coupe(w==0);
+ 		exists Limuzyna(w==0);
+ 		exists Van(w==0);
 	then 
-		System.out.println("Bellsprout");
+		System.out.println("Audi A7");
 		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Bellsprout");
+		JOptionPane.showMessageDialog(frame, "Najlepszym wyborem bêdzie Audi A7");
 end
 
-rule "Weepinbell"
-	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==1);
-	then 
-		System.out.println("Weepinbell");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Weepinbell");
-end
-
-rule "Victreebel"
-	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==1);
-	then 
-		System.out.println("Victreebel");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Victreebel");
-end
-
-rule "Nidoran"
-	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==0);
-		exists Przewodzisz_prad(w==0);
-	then 
-		System.out.println("Nidoran");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Nidoran");
-end
-
-rule "Nidorino"
-	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==0);
-		exists Przewodzisz_prad(w==0);
-	then 
-		System.out.println("Nidorino");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Nidorino");
-end
-
-rule "Nidoking"
-	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==0);
-		exists Przewodzisz_prad(w==0);
-	then 
-		System.out.println("Nidoking");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Nidoking");
-end
-
-rule "Pikachu"
-	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==0);
-		exists Przewodzisz_prad(w==1);
-		exists Jestes_z_metalu(w==0);
-	then 
-		System.out.println("Pikachu");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Pikachu");
-end
-
-rule "Reichu"
-	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==0);
-		exists Przewodzisz_prad(w==1);
-		exists Jestes_z_metalu(w==0);
-	then 
-		System.out.println("Reichu");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Reichu");
-end
-
-rule "Teichu"
-	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==0);
-		exists Przewodzisz_prad(w==1);
-		exists Jestes_z_metalu(w==0);
-	then 
-		System.out.println("Teichu");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Teichu");
-end
-
-rule "Voltorb"
-	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==0);
-		exists Przewodzisz_prad(w==1);
-		exists Jestes_z_metalu(w==1);
-	then 
-		System.out.println("Voltorb");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Voltorb");
-end
-
-rule "Electrode"
-	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==0);
-		exists Przewodzisz_prad(w==1);
-		exists Jestes_z_metalu(w==1);
-	then 
-		System.out.println("Electrode");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Electrode");
-end
-
-rule "Nanotrude"
-	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==1);
-		exists Unosi_w_powietrzu(w==0);
-		exists Jaki_kolor(w==1);
-		exists Ziejesz_ogniem(w==0);
-		exists Jestes_roslina(w==0);
-		exists Przewodzisz_prad(w==1);
-		exists Jestes_z_metalu(w==1);
-	then 
-		System.out.println("Nanotrude");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Nanotrude");
-end
-
-rule "Gastly"
-	when
-		exists Ktory_poziom(w==1);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==5);
-	then 
-		System.out.println("Gastly");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Gastly");
-end
-
-rule "Haunter"
-	when
-		exists Ktory_poziom(w==2);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==5);
-	then 
-		System.out.println("Haunter");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Haunter");
-end
-
-rule "Gengar"
-	when
-		exists Ktory_poziom(w==3);
-		exists Mozna_zlapac(w==1);
-		exists Gdzie_wystepujesz(w==5);
-	then 
-		System.out.println("Gengar");
-		JOptionPane frame = new JOptionPane();
-		JOptionPane.showMessageDialog(frame, "Gengar");
-end
