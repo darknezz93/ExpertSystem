@@ -1,5 +1,6 @@
 package com.sample;
 
+import java.awt.Dimension;
 import java.awt.EventQueue;
 
 import javax.swing.ImageIcon;
@@ -13,6 +14,8 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
+import com.sun.media.sound.Toolkit;
 
 import java.awt.Font;
 
@@ -29,6 +32,10 @@ public class mainn extends JFrame {
 			public void run() {
 				try {
 					mainn frame = new mainn();
+					
+					//Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+					//int x = (int) ((dimension.getWidth() - frame.getWidth())/2);
+					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
