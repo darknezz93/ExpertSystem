@@ -15,12 +15,12 @@
   <type>4</type>
   <activationId>Jaki budzet [1]</activationId>
   <rule>Jaki budzet</rule>
-  <declarations>x=com.sample.DroolsTest$Init@2a82c93e(1)</declarations>
+  <declarations>x=com.sample.DroolsTest$Init@1292a6de(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>com.sample.DroolsTest$Init@2a82c93e</objectToString>
+  <objectToString>com.sample.DroolsTest$Init@1292a6de</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
@@ -32,53 +32,53 @@
   <type>6</type>
   <activationId>Jaki budzet [1]</activationId>
   <rule>Jaki budzet</rule>
-  <declarations>x=com.sample.DroolsTest$Init@2a82c93e(1)</declarations>
+  <declarations>x=com.sample.DroolsTest$Init@1292a6de(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
   <activationId>Czy terenowy [1]</activationId>
   <rule>Czy terenowy</rule>
-  <declarations>x=com.sample.DroolsTest$Init@2a82c93e(1)</declarations>
+  <declarations>x=com.sample.DroolsTest$Init@1292a6de(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>2</factId>
-  <objectToString>com.sample.DroolsTest$Jaki_budzet@3c1f33f2</objectToString>
+  <objectToString>com.sample.DroolsTest$Jaki_budzet@7b5cfd3</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>Jaki budzet [1]</activationId>
   <rule>Jaki budzet</rule>
-  <declarations>x=com.sample.DroolsTest$Init@2a82c93e(1)</declarations>
+  <declarations>x=com.sample.DroolsTest$Init@1292a6de(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
   <activationId>Czy terenowy [1]</activationId>
   <rule>Czy terenowy</rule>
-  <declarations>x=com.sample.DroolsTest$Init@2a82c93e(1)</declarations>
+  <declarations>x=com.sample.DroolsTest$Init@1292a6de(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
   <activationId>Czy mercedes [1]</activationId>
   <rule>Czy mercedes</rule>
-  <declarations>x=com.sample.DroolsTest$Init@2a82c93e(1)</declarations>
+  <declarations>x=com.sample.DroolsTest$Init@1292a6de(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>3</factId>
-  <objectToString>com.sample.DroolsTest$Czy_terenowy@100133f1</objectToString>
+  <objectToString>com.sample.DroolsTest$Czy_terenowy@55b9d320</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>Czy terenowy [1]</activationId>
   <rule>Czy terenowy</rule>
-  <declarations>x=com.sample.DroolsTest$Init@2a82c93e(1)</declarations>
+  <declarations>x=com.sample.DroolsTest$Init@1292a6de(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
   <activationId>Czy mercedes [1]</activationId>
   <rule>Czy mercedes</rule>
-  <declarations>x=com.sample.DroolsTest$Init@2a82c93e(1)</declarations>
+  <declarations>x=com.sample.DroolsTest$Init@1292a6de(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
@@ -89,13 +89,13 @@
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>4</factId>
-  <objectToString>com.sample.DroolsTest$Czy_mercedes@209af33a</objectToString>
+  <objectToString>com.sample.DroolsTest$Czy_mercedes@2661b097</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
   <activationId>Czy mercedes [1]</activationId>
   <rule>Czy mercedes</rule>
-  <declarations>x=com.sample.DroolsTest$Init@2a82c93e(1)</declarations>
+  <declarations>x=com.sample.DroolsTest$Init@1292a6de(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>

@@ -17,7 +17,6 @@ import org.drools.runtime.StatefulKnowledgeSession;
  */
 public class DroolsTest {
 
-
     DroolsTest() {
         try {
             // load up the knowledge base
@@ -79,11 +78,6 @@ public class DroolsTest {
     	public int w;
     	
     	public Czy_terenowy(int wartosc) {
-    		/*
-    		String opis = "Czy mo¿na z³apaæ Twojego Pokemona?";
-    		String odp1 = "Tak";
-    		String odp2 = "Nie";
-    		*/
     		w = wartosc;
     	}
     }
@@ -92,11 +86,6 @@ public class DroolsTest {
     	public int w;
     	
     	public Czy_mercedes(int wartosc) {
-    		/*
-    		String opis = "Czy Twój Pokemon potrafi spiewaæ?";
-    		String odp1 = "Tak";
-    		String odp2 = "Nie";
-    		*/
     		w = wartosc;
     	}
     }
@@ -105,11 +94,6 @@ public class DroolsTest {
     	public int w;
     	
     	public Samochod_rodzinny(int wartosc) {
-    		/*
-    		String opis = "Czy Twój Pokemon potrafi unosiæ siê w powietrzu?";
-    		String odp1 = "Tak";
-    		String odp2 = "Nie";
-    		*/
     		w = wartosc;
     	}
     }
@@ -119,11 +103,6 @@ public class DroolsTest {
     	
     	public Pojemny_bagaznik(int wartosc) {
 
-    		/*
-    		String opis = "Czy Twój Pokemon ma skrzyd³a?";
-    		String odp1 = "Tak";
-    		String odp2 = "Nie";
-    		*/
     		w = wartosc;
     	}
     }
@@ -132,11 +111,6 @@ public class DroolsTest {
     	public int w;
     	
     	public Samochod_sportowy(int wartosc) {
-    		/*
-    		String opis = "Czy Twój Pokemon jest owadem?";
-    		String odp1 = "Tak";
-    		String odp2 = "Nie";
-    		*/
     		w = wartosc;
     	}
     }
@@ -145,13 +119,6 @@ public class DroolsTest {
     	public int w;
     	
     	public Samochod_miejski(int wartosc) {
-    		/*
-    		String opis = "Gdzie Twój Pokemon wystêpuje?";
-    		String odp1 = "£¹ki";
-    		String odp2 = "Lasy";
-    		String odp3 = "Ruiny miasta";
-    		String odp4 = "Woda";
-    		*/
     		w = wartosc;
     	}
     }
@@ -160,11 +127,6 @@ public class DroolsTest {
     	public int w;
     	
     	public Samochod_cabrio(int wartosc) {
-    		/*
-    		String opis = "Czy Twój Pokemon lubi s³on¹ wodê?";
-    		String odp1 = "Tak";
-    		String odp2 = "Nie";
-    		*/
     		w = wartosc;
     	}
     }
@@ -173,11 +135,6 @@ public class DroolsTest {
     	public int w;
     	
     	public Samochod_combi(int wartosc) {
-    		/*
-    		String opis = "Czy Twój Pokemon lubi s³odk¹ wodê?";
-    		String odp1 = "Tak";
-    		String odp2 = "Nie";
-    		*/
     		w = wartosc;
     	}
     }
@@ -186,11 +143,6 @@ public class DroolsTest {
     	public int w;
     	
     	public Samochod_coupe(int wartosc) {
-    		/*
-    		String opis = "Jakiego koloru jest Twój Pokemon?";
-    		String odp1 = "Ciep³y";
-    		String odp2 = "Zimny";
-    		*/
     		w = wartosc;
     	}
     }
@@ -199,11 +151,6 @@ public class DroolsTest {
     	public int w;
     	
     	public Limuzyna(int wartosc) {
-    		/*
-    		String opis = "Czy Twój Pokemon zieje ogniem?";
-    		String odp1 = "Tak";
-    		String odp2 = "Nie";
-    		*/
     		w = wartosc;
     	} 
     }
@@ -212,11 +159,7 @@ public class DroolsTest {
     	public int w;
     	
     	public Van(int wartosc) {
-    		/*
-    		String opis = "Czy Twój Pokemon jest roœlin¹?";
-    		String odp1 = "Tak";
-    		String odp2 = "Nie";
-    		 */
+
     		w = wartosc;
     	} 
     }
